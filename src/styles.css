@@ -1,0 +1,134 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * CyberTrack design system — terminal-night hacker theme.
+ * Dark only: :root and .dark share the same values.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --font-sans: "Hind", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Black", "Hind", ui-sans-serif, sans-serif;
+  --shadow-glow: 0 0 42px -14px color-mix(in oklab, var(--primary) 55%, transparent);
+  --shadow-card: 0 1px 0 0 color-mix(in oklab, var(--primary) 8%, transparent) inset;
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.145 0.018 155);
+  --foreground: oklch(0.93 0.025 150);
+  --card: oklch(0.185 0.022 155);
+  --card-foreground: oklch(0.93 0.025 150);
+  --popover: oklch(0.185 0.022 155);
+  --popover-foreground: oklch(0.93 0.025 150);
+  --primary: oklch(0.84 0.23 152);
+  --primary-foreground: oklch(0.16 0.04 152);
+  --secondary: oklch(0.25 0.028 155);
+  --secondary-foreground: oklch(0.9 0.03 152);
+  --muted: oklch(0.23 0.02 155);
+  --muted-foreground: oklch(0.66 0.045 155);
+  --accent: oklch(0.78 0.13 200);
+  --accent-foreground: oklch(0.16 0.03 200);
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.97 0.01 25);
+  --border: oklch(0.93 0.03 150 / 10%);
+  --input: oklch(0.93 0.03 150 / 14%);
+  --ring: oklch(0.84 0.23 152 / 45%);
+  --chart-1: oklch(0.84 0.23 152);
+  --chart-2: oklch(0.78 0.13 200);
+  --chart-3: oklch(0.8 0.16 85);
+  --chart-4: oklch(0.65 0.2 300);
+  --chart-5: oklch(0.63 0.21 25);
+}
+
+.dark {
+  --background: oklch(0.145 0.018 155);
+  --foreground: oklch(0.93 0.025 150);
+  --card: oklch(0.185 0.022 155);
+  --card-foreground: oklch(0.93 0.025 150);
+  --popover: oklch(0.185 0.022 155);
+  --popover-foreground: oklch(0.93 0.025 150);
+  --primary: oklch(0.84 0.23 152);
+  --primary-foreground: oklch(0.16 0.04 152);
+  --secondary: oklch(0.25 0.028 155);
+  --secondary-foreground: oklch(0.9 0.03 152);
+  --muted: oklch(0.23 0.02 155);
+  --muted-foreground: oklch(0.66 0.045 155);
+  --accent: oklch(0.78 0.13 200);
+  --accent-foreground: oklch(0.16 0.03 200);
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.97 0.01 25);
+  --border: oklch(0.93 0.03 150 / 10%);
+  --input: oklch(0.93 0.03 150 / 14%);
+  --ring: oklch(0.84 0.23 152 / 45%);
+  --chart-1: oklch(0.84 0.23 152);
+  --chart-2: oklch(0.78 0.13 200);
+  --chart-3: oklch(0.8 0.16 85);
+  --chart-4: oklch(0.65 0.2 300);
+  --chart-5: oklch(0.63 0.21 25);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--primary) 35%, transparent);
+  }
+}
+
+@utility scan-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-primary) 4%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-primary) 4%, transparent) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+@utility glow-text {
+  text-shadow: 0 0 24px color-mix(in oklab, var(--color-primary) 55%, transparent);
+}

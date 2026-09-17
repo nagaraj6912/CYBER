@@ -1,0 +1,68 @@
+{
+  "source": "github",
+  "repo": "nagaraj6912/CYBER",
+  "artifact": "compiled Flutter web build (main.dart.js, no Dart source, no pubspec)",
+  "app": {
+    "name": "cybertrack",
+    "tagline": "Beginner-first path to SOC / blue-team readiness",
+    "type": "cybersecurity learning roadmap tracker (local-only, no backend, no auth)"
+  },
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "compiled main.dart.js + index.html + icons",
+      "outcome": "rebuild",
+      "status": "pending",
+      "next_action": "Recreate app as TanStack Start web app in this Lovable project; original Flutter build is not editable source"
+    },
+    {
+      "capability": "roadmap",
+      "source": "strings: 'Six-month roadmap', modules (Security fundamentals, Networking essentials, Cisco Networking Basics, SOC analyst core skills, Detection & investigation labs), 'Mark complete/incomplete'",
+      "outcome": "rebuild",
+      "status": "pending",
+      "next_action": "Build roadmap screen with modules, tasks, curated resources, completion state"
+    },
+    {
+      "capability": "resources",
+      "source": "strings: TryHackMe (Pre Security, Network Fundamentals, SOC Level 1), Professor Messer Network+, Cisco Networking Basics, Microsoft Learn Windows security, LetsDefend SOC Analyst, CyberDefenders, Security Blue Team BTL1, ISC2 CC",
+      "outcome": "rebuild",
+      "status": "pending",
+      "next_action": "Attach resource links to roadmap modules"
+    },
+    {
+      "capability": "study_logging",
+      "source": "strings: 'Log a study session', 'Log study time', 'Make the plan fit short study sessions'",
+      "outcome": "rebuild",
+      "status": "pending",
+      "next_action": "Study session logging with totals"
+    },
+    {
+      "capability": "notes",
+      "source": "strings: 'Your commands, lab evidence, and learning reminders', 'Search notes', 'Delete note?', 'No notes yet...'",
+      "outcome": "rebuild",
+      "status": "pending",
+      "next_action": "Notes area with search and delete"
+    },
+    {
+      "capability": "ai_change_proposals",
+      "source": "strings: 'AI change proposals', 'Create proposal', 'Ask for a change; review it before your roadmap changes', 'Add one beginner phishing triage lab before the SOC analyst module'",
+      "outcome": "rebuild",
+      "status": "pending",
+      "next_action": "AI-assisted roadmap change proposals with review before applying (Lovable AI Gateway)"
+    },
+    {
+      "capability": "records",
+      "source": "none — data was stored on-device (SharedPreferences), no export exists",
+      "outcome": "rebuild-empty",
+      "status": "accepted",
+      "next_action": "Persist via Lovable Cloud (db) so data survives devices; start empty"
+    },
+    {
+      "capability": "auth",
+      "source": "none — app was local-only, no sign-in, no user rows",
+      "outcome": "replace-with-lovable-auth-optional",
+      "status": "pending",
+      "next_action": "Decide with user: keep data on this device only, or add accounts"
+    }
+  ]
+}
